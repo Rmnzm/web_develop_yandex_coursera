@@ -1,0 +1,61 @@
+div 
+{
+    width: 150px;
+    height: 150px;
+    background-color: #f00;
+    transition: background-color 1s linear;
+    -webkit-transition: background-color 1s linear;
+    -moz-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear;
+    -o-transition: background-color 1s linear;
+}
+
+div:hover {
+    background-color: #ff0;
+}
+
+.animation 
+{
+    animation: move 5s infinite linear alternate;
+    -webkit-animation: move 5s infinite linear alternate;
+}
+
+
+@keyframes move {
+    from {
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+}
+    25% {
+        transform: translate(100px,0);
+        -webkit-transform: translate(100px,0);
+        -moz-transform: translate(100px,0);
+        -ms-transform: translate(100px,0);
+        -o-transform: translate(100px,0);
+}
+    50% {
+        transform: translate(100px,150px);
+        -webkit-transform: translate(100px,150px);
+        -moz-transform: translate(100px,150px);
+        -ms-transform: translate(100px,150px);
+        -o-transform: translate(100px,150px);
+}
+    75% {
+        transform: translate(100px, 150px) scale(2);
+        -webkit-transform: translate(100px, 150px) scale(2);
+        -moz-transform: translate(100px, 150px) scale(2);
+        -ms-transform: translate(100px, 150px) scale(2);
+        -o-transform: translate(100px, 150px) scale(2);
+}
+    to {
+        transform: translate(100px,150px) scale(2) rotate(145deg);
+        -webkit-transform: translate(100px,150px) scale(2) rotate(145deg);
+        -moz-transform: translate(100px,150px) scale(2) rotate(145deg);
+        -ms-transform: translate(100px,150px) scale(2) rotate(145deg);
+        -o-transform: translate(100px,150px) scale(2) rotate(145deg);
+}
+}
+
