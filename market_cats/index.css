@@ -1,0 +1,91 @@
+/* font-family: 'Roboto', ; */
+
+* {
+    font-family: 'Roboto', ;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    background: #c7bfbf;
+}
+
+.header > h1 {
+    text-align: center;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.header > h1::first-letter {
+    color: red;
+}
+
+.header {
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+.wrapper {
+    padding: 1em;
+    display: flex;
+}
+
+.wrapper > .nav {
+    width: 50%;
+    text-align: center;
+}
+
+.wrapper > .nav > .btn {
+    padding: 1em;
+    width: 100%;
+    margin: 1em;
+    background: #c7bfbf;
+    border: none;
+}
+
+.wrapper > .nav > .btn:hover {
+    background: #6b6969;
+    border: 1px solid black;
+}
+
+.wrapper > .nav > .btn:visited {
+    border: 1px solid black;;
+}
+
+.wrapper > .main {
+    padding: 2em;
+}
+
+.wrapper > .quality {
+    width: 50%;
+}
+
+.footer > .organisation {
+    font-size: 24px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer > .address {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer > .address > a {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer > .address > a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+}
