@@ -4,13 +4,17 @@
     font-family: 'Roboto', ;
     margin: 0;
     padding: 0;
+    
+    background-color: #ebebeb;
 }
 
 body {
-    max-width: 1200px;
-    margin: auto;
-    background: #c7bfbf;
+    color: #000;
+    margin: 0;
+    padding: 0;
 }
+
+/*-------------------------------Шапка---------------------------------------*/
 
 .header > h1 {
     text-align: center;
@@ -27,40 +31,314 @@ body {
     padding-bottom: 2em;
 }
 
-.wrapper {
-    padding: 1em;
-    display: flex;
+/*---------------------------Страница------------------------------------*/
+
+.page-wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 1300px;
+    margin: 0 auto;
+    background-color: #ebebeb;
 }
 
-.wrapper > .nav {
-    width: 50%;
-    text-align: center;
+/*-------------------------------Главный блок----------------------------------*/
+
+.page-main
+{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 28px [nav] 210px 15px [main] 1fr 15px [rside] 230px 28px;
+    grid-template-rows: auto;
 }
 
-.wrapper > .nav > .btn {
-    padding: 1em;
+.page-main > input[name='cat-breed']
+{
+    display: none;
+}
+
+/*---------------------------Навигациии блок---------------------------*/
+
+.navigation
+{
+    grid-column: nav;
+}
+
+.navigation__item
+{
+    display: block;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.navigation__item:hover
+{
+    background-color: #888;
+}
+
+input[id='maine_kun']:checked ~ .navigation > .navigation__item[for='maine_kun'],
+input[id='abbys']:checked ~ .navigation > .navigation__item[for='abbys'],
+input[id='bengal']:checked ~ .navigation > .navigation__item[for='bengal'],
+input[id='british']:checked ~ .navigation > .navigation__item[for='british'],
+input[id='russian']:checked ~ .navigation > .navigation__item[for='russian'],
+input[id='scotland']:checked ~ .navigation > .navigation__item[for='scotland'],
+input[id='siam']:checked ~ .navigation > .navigation__item[for='siam'],
+input[id='syberian']:checked ~ .navigation > .navigation__item[for='syberian'],
+input[id='cansel']:checked ~ .navigation > .navigation__item[for='cansel']
+{
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+/*----------------------------Блок фоток----------------------------------*/
+
+.photos
+{
+    grid-column: main;
+    display: grid;
+    grid-template-columns: [img1-start] 250px [img1-end] 12px [img2-start] 250px [img2-end] 12px [img3-start] 250px [img3-end];
+    grid-template-rows: auto;
+    margin-top: -12px;
+}
+
+.photo-card
+{
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 12px;
+}
+
+.photo-card:nth-of-type(8n + 1),
+.photo-card:nth-of-type(8n + 3)
+{
+    grid-column: img1-start;
+}
+
+.photo-card:nth-of-type(8n + 4)
+{
+    grid-column: img2-start;
+}
+
+.photo-card:nth-of-type(8n + 5),
+.photo-card:nth-of-type(8n + 7)
+{
+    grid-column: img3-start;
+}
+
+.photo-card:nth-of-type(8n + 2)
+{
+    grid-column: img2-start / img3-end;
+}
+
+.photo-card:nth-of-type(8n + 6)
+{
+    grid-column: img1-start / img2-end;
+}
+
+.photo-card:nth-of-type(8n + 8)
+{
+    grid-column: img1-start / img3-end;
+}
+
+.photo-card:nth-of-type(8n + 2) > .photo-card__image
+{
+    position: relative;
+    height: auto;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+}
+
+.photo-card:nth-of-type(8n + 6) > .photo-card__image
+{
+    position: relative;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo-card:nth-of-type(8n + 8) > .photo-card__image
+{
+    position: relative;
+    height: auto;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+}
+
+.photo-card__info
+{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    font-size: 1.6rem;
+    padding: 15px 10px;
+    margin: 0;
+    color: #fff;
+    background-color: rgba(122, 122, 122, .7);
+}
+
+.photo-card:hover > .photo-card__info
+{
+    display: block;
+}
+
+.photo-card__image
+{
     width: 100%;
-    margin: 1em;
-    background: #c7bfbf;
-    border: none;
+    height: 100%;
 }
 
-.wrapper > .nav > .btn:hover {
-    background: #6b6969;
-    border: 1px solid black;
+#maine_kun:checked ~ .photos > .photo-card:not(.maine_kun),
+#abbys:checked ~ .photos > .photo-card:not(.abbys),
+#bengal:checked ~ .photos > .photo-card:not(.bengal),
+#british:checked ~ .photos > .photo-card:not(.british),
+#russian:checked ~ .photos > .photo-card:not(.russian),
+#scotland:checked ~ .photos > .photo-card:not(.scotland),
+#siam:checked ~ .photos > .photo-card:not(.siam),
+#syberian:checked ~ .photos > .photo-card:not(.syberian)
+{
+    -webkit-filter: grayscale(1) opacity(.75) blur(2px);
+    filter: grayscale(1) opacity(.75) blur(2px);
 }
 
-.wrapper > .nav > .btn:visited {
-    border: 1px solid black;;
+/*----------------------------Ранжирование--------------------------------------*/
+
+.rating {
+    grid-column: rside;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 5px 15px 15px;
 }
 
-.wrapper > .main {
-    padding: 2em;
+.rating > h3 {
+    font-size: 32px;
+    padding-bottom: 1em;
+    text-align: center;
+    color: red;
 }
 
-.wrapper > .quality {
-    width: 50%;
+.rating > label {
+    font-size: 24px;
 }
+
+.cats_rate {
+    display: flex;
+    flex-direction: column;
+}
+
+#q1:checked ~ .cats_rate > .cat_card {
+    order: var(--default);
+}
+
+#q2:checked ~ .cats_rate > .cat_card {
+    order: var(--cost);
+}
+
+#q2:checked ~ .cats_rate {
+    flex-direction: column-reverse;
+}
+
+.cat_card {
+    padding-top: 1em;
+}
+
+.rate_name {
+    padding-bottom: 1em;
+    font-size: 24px;
+}
+
+.rate_value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate_value > .rate {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.value {
+    width: 150px;
+    height: 30px;
+}
+
+.mein_kun > .rate_value > .value > .load {
+    width: 100%;
+    height: 100%;
+    background: green;
+    box-shadow:-50px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.abbys > .rate_value > .value > .load {
+    width: 40%;
+    height: 100%;
+    background: orangered;
+    box-shadow:-10px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+.bengal > .rate_value > .value > .load {
+    width: 70%;
+    height: 100%;
+    background: greenyellow;
+    box-shadow:-30px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+.british > .rate_value > .value > .load {
+    width: 90%;
+    height: 100%;
+    background: seagreen;
+    box-shadow:-40px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+.russian > .rate_value > .value > .load {
+    width: 80%;
+    height: 100%;
+    background: greenyellow;
+    box-shadow:-30px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+.scotland > .rate_value > .value > .load {
+    width: 60%;
+    height: 100%;
+    background: yellow;
+    box-shadow:-20px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+.siam > .rate_value > .value > .load {
+    width: 20%;
+    height: 100%;
+    background: red;
+    box-shadow:-5px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+.syberian > .rate_value > .value > .load {
+    width: 100%;
+    height: 100%;
+    background: green;
+    box-shadow:-50px 0px 13px 0px rgba(255,255,255,0.43)inset;
+    border-radius: 10px;
+}
+
+/*----------------------------Подвал------------------------------------------*/
 
 .footer > .organisation {
     font-size: 24px;
@@ -69,7 +347,7 @@ body {
 }
 
 .footer > .address {
-    padding-top: 1em;
+    padding-top: 1.5em;
     padding-bottom: 1em;
 }
 
@@ -89,3 +367,6 @@ body {
     justify-content: space-around;
     border-top: 1px solid black;
 }
+
+/*----------------------------------------------------------------------*/
+

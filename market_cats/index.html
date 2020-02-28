@@ -8,49 +8,204 @@
     <title>Бабуленькины котятки</title>
 </head>
 <body>
-    <div class="header">
-        <h1>BABULEN'KINY KOTYATKI</h1>
-    </div>
-    <div class="wrapper">
-        <div class="nav">
-            <button class="btn">
-                <p>Мейн-кун</p>
-            </button>
-            <button class="btn">
-                <p>Аббиссийская</p>
-            </button>
-            <button class="btn">
-                <p>Бенгальская</p>
-            </button>
-            <button class="btn">
-                <p>Британская</p>
-            </button>
-            <button class="btn">
-                <p>Русская</p>
-            </button>
-            <button class="btn">
-                <p>Шотландская</p>
-            </button>
-            <button class="btn">
-                <p>Сиамская</p>
-            </button>
-            <button class="btn">
-                <p>Сибирская</p>
-            </button>
+    <div class="page-wrapper">
+        <div class="header">
+            <h1>BABULEN'KINY KOTYATKI</h1>
         </div>
-        <div class="main">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam numquam consequuntur harum debitis! Repellat in quos maxime sapiente tenetur architecto, ipsa minus corporis laborum veniam iure voluptates harum rerum cum sint exercitationem qui maiores quod ab dicta veritatis. Odio fugit ipsum consectetur! Maxime quod laborum a corrupti odio iure, adipisci, saepe officia dignissimos quaerat ut?
+        <main class="page-main">
+            <input id="maine_kun" name="cat-breed" type="radio">
+            <input id="abbys" name="cat-breed" type="radio">
+            <input id="bengal" name="cat-breed" type="radio">
+            <input id="british" name="cat-breed" type="radio">
+            <input id="russian" name="cat-breed" type="radio">
+            <input id="scotland" name="cat-breed" type="radio">
+            <input id="siam" name="cat-breed" type="radio">
+            <input id="syberian" name="cat-breed" type="radio">
+            <input id="cansel" name="cat-breed" type="radio">
+            <nav class="navigation">
+                <label class="navigation__item" for="maine_kun">Мейн-кун</label>
+                <label class="navigation__item" for="abbys">Аббиссийская</label>
+                <label class="navigation__item" for="bengal">Бенгальская</label>
+                <label class="navigation__item" for="british">Британская</label>
+                <label class="navigation__item" for="russian">Русская</label>
+                <label class="navigation__item" for="scotland">Шотландская</label>
+                <label class="navigation__item" for="siam">Сиамская</label>
+                <label class="navigation__item" for="syberian">Сибирская</label>
+                <label class="navigation__item" for="cansel">Отменить выделение</label>
+            </nav>
+            <section class="photos">
+                <div class="photo-card maine_kun">
+                    <img class="photo-card__image" src="images/maine_kun.jpg" alt="Мейн-кун">
+                    <p class="photo-card__info">Арчибальд - 7 лет</p>
+                </div>
+                <div class="photo-card abbys">
+                    <img class="photo-card__image" src="images/abbysy.jpg" alt="Аббиссийская">
+                    <p class="photo-card__info">Сибилла - 5 лет </p>
+                </div>
+                <div class="photo-card bengal">
+                    <img class="photo-card__image" src="images/bengal.jpg" alt="Бенгальская">
+                    <p class="photo-card__info">Августина - 3 года</p>
+                </div>
+                <div class="photo-card british">
+                    <img class="photo-card__image" src="images/british.jpg" alt="Британская">
+                    <p class="photo-card__info">Питирим - 6 лет</p>
+                </div>
+                <div class="photo-card russian">
+                    <img class="photo-card__image" src="images/russina.jpg" alt="Русская">
+                    <p class="photo-card__info">Жозефина - 5 лет </p>
+                </div>
+                <div class="photo-card scotland">
+                    <img class="photo-card__image" src="images/scotland.jpg" alt="Шотландская">
+                    <p class="photo-card__info">Бенедикт - 2 года </p>
+                </div>
+                <div class="photo-card siam">
+                    <img class="photo-card__image" src="images/siam.jpg" alt="Сиамская">
+                    <p class="photo-card__info">Мария - 4 года</p>
+                </div>
+                <div class="photo-card syberian">
+                    <img class="photo-card__image" src="images/syberian.jpg" alt="Сибирская">
+                    <p class="photo-card__info">Людовик - 7 лет </p>
+                </div>
+                
+            </section>
+            <div class="rating">
+                <h3>РЕЙТИНГ</h3>
+                <input id="q1" type="radio" name="sort" checked>
+                <label for="q1">По умолчанию</label>
+                <br>
+                <input id="q2" type="radio" name="sort">
+                <label for="q2">По убыванию</label>
+                <div class="cats_rate">
+                    <div class="cat_card" style="--default: 1; --cost: 8">
+                        <div class="mein_kun">
+                            <div class="rate_name">
+                                <h4>Мейн-кун</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    10
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 2; --cost: 2">
+                        <div class="abbys">
+                            <div class="rate_name">
+                                <h4>Аббиссийская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 3; --cost: 4">
+                        <div class="bengal">
+                            <div class="rate_name">
+                                <h4>Бенгальская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    7
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 4; --cost: 6">
+                        <div class="british">
+                            <div class="rate_name">
+                                <h4>Британская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    9
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 5; --cost: 5">
+                        <div class="russian">
+                            <div class="rate_name">
+                                <h4>Русская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 6; --cost: 3">
+                        <div class="scotland">
+                            <div class="rate_name">
+                                <h4>Шотландская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 7; --cost: 1">
+                        <div class="siam">
+                            <div class="rate_name">
+                                <h4>Сиамская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat_card" style="--default: 8; --cost: 7">
+                        <div class="syberian">
+                            <div class="rate_name">
+                                <h4>Сибирская</h4>
+                            </div>
+                            <div class="rate_value">
+                                <div class="value">
+                                    <div class="load"></div>
+                                </div>
+                                <div class="rate">
+                                    10
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="quality">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam numquam consequuntur harum debitis! Repellat in quos maxime sapiente tenetur architecto, ipsa minus corporis laborum veniam iure voluptates harum rerum cum sint exercitationem qui maiores quod ab dicta veritatis. Odio fugit ipsum consectetur! Maxime quod laborum a corrupti odio iure, adipisci, saepe officia dignissimos quaerat ut?
-        </div>
-    </div>
-    <div class="footer">
-        <div class="organisation">
-            <p>&copy ООО Бабуленькины котятки, 2020</p>
-        </div>
-        <div class="address">
-            <a href="https://yandex.ru">Наш адрес: Улица Котовая д. 5</a>
+        <div class="footer">
+            <div class="organisation">
+                <p>&copy ООО Бабуленькины котятки, 2020</p>
+            </div>
+            <div class="address">
+                <a href="https://yandex.ru">Наш адрес: Улица Котовая д. 5</a>
+            </div>
         </div>
     </div>
 </body>
