@@ -8,4 +8,4 @@
 
 4. test and css - задачки
 
-5. market_cats - верстка макета с flex/grid 
+5. market_cats - верстка макета с flex/grid (не адаптивная)
