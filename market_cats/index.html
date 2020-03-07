@@ -68,137 +68,22 @@
                 </div>
                 
             </section>
-            <div class="rating">
-                <h3>РЕЙТИНГ</h3>
-                <input id="q1" type="radio" name="sort" checked>
-                <label for="q1">По умолчанию</label>
-                <br>
-                <input id="q2" type="radio" name="sort">
-                <label for="q2">По убыванию</label>
-                <div class="cats_rate">
-                    <div class="cat_card" style="--default: 1; --cost: 8">
-                        <div class="mein_kun">
-                            <div class="rate_name">
-                                <h4>Мейн-кун</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    10
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 2; --cost: 2">
-                        <div class="abbys">
-                            <div class="rate_name">
-                                <h4>Аббиссийская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    4
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 3; --cost: 4">
-                        <div class="bengal">
-                            <div class="rate_name">
-                                <h4>Бенгальская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    7
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 4; --cost: 6">
-                        <div class="british">
-                            <div class="rate_name">
-                                <h4>Британская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    9
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 5; --cost: 5">
-                        <div class="russian">
-                            <div class="rate_name">
-                                <h4>Русская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    8
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 6; --cost: 3">
-                        <div class="scotland">
-                            <div class="rate_name">
-                                <h4>Шотландская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    6
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 7; --cost: 1">
-                        <div class="siam">
-                            <div class="rate_name">
-                                <h4>Сиамская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    2
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cat_card" style="--default: 8; --cost: 7">
-                        <div class="syberian">
-                            <div class="rate_name">
-                                <h4>Сибирская</h4>
-                            </div>
-                            <div class="rate_value">
-                                <div class="value">
-                                    <div class="load"></div>
-                                </div>
-                                <div class="rate">
-                                    10
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <section class="rating">
+                <h2>Рейтинг</h2>
+                <input type="checkbox" id="sort">
+                <label for="sort">По убыванию</label>
+                <ul class="rating-items">
+                    <li data-value="4">Аббиссийская</li>
+                    <li data-value="5">Шотландская</li>
+                    <li data-value="6">Бенгальская</li>
+                    <li data-value="9">Сибирская</li>
+                    <li data-value="8">Русская</li>
+                    <li data-value="10">Мейн-кун</li>
+                    <li data-value="7">Британская</li>
+                    <li data-value="3">Сиамская</li>
+                </ul>
+            </section>
+        </main>
         <div class="footer">
             <div class="organisation">
                 <p>&copy ООО Бабуленькины котятки, 2020</p>
